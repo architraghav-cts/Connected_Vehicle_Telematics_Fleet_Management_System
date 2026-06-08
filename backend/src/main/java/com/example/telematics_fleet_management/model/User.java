@@ -1,5 +1,4 @@
 package com.example.telematics_fleet_management.model;
-import com.example.telematics_fleet_management.model.enums.Role;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,9 +15,9 @@ public class User {
     private String password;
 
 
-    private Role role;
+    private DriverScore role;
 
-    public User(String username, String email, String password, Role role) {
+    public User(String username, String email, String password, DriverScore role) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -62,11 +61,11 @@ public class User {
         this.password = password;
     }
 
-    public Role getRole() {
+    public DriverScore getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(DriverScore role) {
         this.role = role;
     }
 
