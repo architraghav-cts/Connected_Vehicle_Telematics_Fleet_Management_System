@@ -1,7 +1,6 @@
 package com.example.telematics_fleet_management.utils;
 
 import com.example.telematics_fleet_management.model.User;
-import com.example.telematics_fleet_management.model.enums.Role;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -17,42 +16,42 @@ public class DummyUserGenerator {
                 "Admin User",
                 "admin@gmail.com",
                 "admin123",
-                Role.ADMIN
+                DriverScore.ADMIN
         ));
 
         users.add(new User(
                 "Fleet Manager",
                 "fleet@gmail.com",
                 "fleet123",
-                Role.FLEET_MANAGER
+                DriverScore.FLEET_MANAGER
         ));
 
         users.add(new User(
                 "Driver One",
                 "driver@gmail.com",
                 "driver123",
-                Role.DRIVER
+                DriverScore.DRIVER
         ));
 
         users.add(new User(
                 "Safety Officer",
                 "safety@gmail.com",
                 "safety123",
-                Role.SAFETY_OFFICER
+                DriverScore.SAFETY_OFFICER
         ));
 
         users.add(new User(
                 "Service Engineer",
                 "service@gmail.com",
                 "service123",
-                Role.SERVICE_ENGINEER
+                DriverScore.SERVICE_ENGINEER
         ));
 
         users.add(new User(
                 "Operations Analyst",
                 "analyst@gmail.com",
                 "analyst123",
-                Role.OPERATIONS_ANALYST
+                DriverScore.OPERATIONS_ANALYST
         ));
 
         return users;
