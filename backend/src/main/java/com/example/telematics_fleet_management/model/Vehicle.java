@@ -1,4 +1,5 @@
 package com.example.telematics_fleet_management.model;
+import com.example.telematics_fleet_management.model.enums.VehicleStatus;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
