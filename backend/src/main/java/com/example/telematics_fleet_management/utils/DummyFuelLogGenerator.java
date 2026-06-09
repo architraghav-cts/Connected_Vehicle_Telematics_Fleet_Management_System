@@ -1,5 +1,12 @@
 package com.example.telematics_fleet_management.utils;
 
+import com.example.telematics_fleet_management.model.FuelLog;
+import com.example.telematics_fleet_management.model.Vehicle;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+import java.util.Random;
+
 @Component
 
 public class DummyFuelLogGenerator {
