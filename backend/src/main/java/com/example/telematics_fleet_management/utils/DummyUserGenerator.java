@@ -1,5 +1,6 @@
 package com.example.telematics_fleet_management.utils;
 
+import com.example.telematics_fleet_management.model.DriverScore;
 import com.example.telematics_fleet_management.model.User;
 import org.springframework.stereotype.Component;
 
