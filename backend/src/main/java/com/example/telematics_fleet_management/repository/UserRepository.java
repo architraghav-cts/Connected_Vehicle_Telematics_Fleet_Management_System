@@ -7,4 +7,6 @@ import com.example.telematics_fleet_management.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+    User findByEmail(String email);
+
 }
