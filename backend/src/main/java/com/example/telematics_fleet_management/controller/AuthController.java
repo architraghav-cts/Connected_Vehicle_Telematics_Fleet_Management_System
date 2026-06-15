@@ -33,7 +33,6 @@ public class AuthController {
         return "login";
 
     }
-
     @PostMapping("/login")
 
     public String login(@RequestParam String email, @RequestParam String password, Model model) {
