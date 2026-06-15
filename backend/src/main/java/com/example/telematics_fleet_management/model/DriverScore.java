@@ -23,6 +23,8 @@ public class DriverScore {
     private int harshEventCount;
     private int overspeedCount;
     private Double safetyScore;
+
+
     public DriverScore(User driver, Vehicle vehicle, LocalDate scoringDate, int harshEventCount, int overspeedCount, Double safetyScore) {
 
         this.driver = driver;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Management System</title>
+
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <div class="login-card">
+
+            <h1>Fleet Management System</h1>
+            <p class="subtitle">Sign in to continue</p>
+
+            <form th:action="@{/login}" method="post">
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email"
+                           name="email"
+                           placeholder="Enter your email"
+                           required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password"
+                           name="password"
+                           placeholder="Enter your password"
+                           required>
+                </div>
+
+                <div th:if="${error}" class="error-message">
+                    <span th:text="${error}"></span>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
