@@ -1,6 +1,7 @@
 package com.example.telematics_fleet_management.controller;
 
 import com.example.telematics_fleet_management.model.User;
+import com.example.telematics_fleet_management.service.AdminService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
