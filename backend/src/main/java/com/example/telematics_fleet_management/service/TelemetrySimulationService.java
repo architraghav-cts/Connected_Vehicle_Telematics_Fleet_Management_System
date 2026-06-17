@@ -76,7 +76,7 @@ public class TelemetrySimulationService {
 
     }
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 30000)
 
     public void generateData() {
 

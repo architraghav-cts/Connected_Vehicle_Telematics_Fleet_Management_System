@@ -1,10 +1,7 @@
 package com.example.telematics_fleet_management.model;
 import com.example.telematics_fleet_management.model.enums.Role;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class User {
@@ -16,7 +13,7 @@ public class User {
     private String email;
     private String password;
 
-
+    @Enumerated(EnumType.STRING)
     private Role role;
 
     public User(String username, String email, String password, Role role) {
@@ -27,6 +24,7 @@ public class User {
     }
 
     public User() {
+
     }
 
 
