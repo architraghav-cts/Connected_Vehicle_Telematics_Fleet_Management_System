@@ -22,6 +22,8 @@ public class AdminController {
 
         model.addAttribute("totalUsers",
                 adminService.getTotalUsers());
+        model.addAttribute("totalVehicles",
+                adminService.getTotalVehicles());
 
         return "admin/dashboard";
     }
@@ -29,10 +31,14 @@ public class AdminController {
     @GetMapping("/admin/users")
     public String users(Model model) {
 
+
+
         List<User> users = adminService.getAllUsers();
 
         model.addAttribute("users", users);
 
         return "admin/user";
     }
+
+
 }
