@@ -10,7 +10,6 @@ public class Vehicle {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private int vehicleId;
 
     private String vin;
