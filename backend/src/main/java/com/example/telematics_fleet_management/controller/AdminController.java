@@ -31,7 +31,6 @@ public class AdminController {
 
         return response;
     }
-
     @GetMapping("/users")
     public List<User> getAllUsers() {
         return adminService.getAllUsers();
