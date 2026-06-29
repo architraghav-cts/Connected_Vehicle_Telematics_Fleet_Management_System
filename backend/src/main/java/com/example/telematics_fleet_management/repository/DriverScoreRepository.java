@@ -11,4 +11,6 @@ import java.util.List;
 public interface DriverScoreRepository extends JpaRepository<DriverScore,Integer> {
     List<DriverScore> findByDriver(User driver);
     DriverScore findTopByDriverOrderByScoringDateDesc(User driver);
+    DriverScore findTopByDriverOrderByScoreIdDesc(User driver);
+
 }
