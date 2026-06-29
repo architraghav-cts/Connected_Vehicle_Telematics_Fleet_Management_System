@@ -6,6 +6,7 @@ import com.example.telematics_fleet_management.repository.*;
 import com.example.telematics_fleet_management.utils.DummyServiceRecordGenerator;
 import com.example.telematics_fleet_management.utils.DummyTelemetryGenerator;
 import com.example.telematics_fleet_management.utils.DummyTripGenerator;
+import com.example.telematics_fleet_management.utils.DummyFuelLogGenerator;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -100,7 +101,6 @@ public class TelemetrySimulationService {
                 );
             }
         }
-
         System.out.println("Dummy fleet data generated.");
     }
 }
