@@ -2,6 +2,8 @@ package com.example.telematics_fleet_management.utils;
 
 import com.example.telematics_fleet_management.model.ServiceRecord;
 import com.example.telematics_fleet_management.model.Vehicle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -11,6 +13,7 @@ import java.util.Random;
 public class DummyServiceRecordGenerator {
 
     private final Random random = new Random();
+    private static final Logger logger = LoggerFactory.getLogger(DummyServiceRecordGenerator.class);
 
     public ServiceRecord generate(Vehicle vehicle) {
 
@@ -49,6 +52,7 @@ public class DummyServiceRecordGenerator {
                 serviceDate.plusMonths(3)
         );
 
+        logger.info("Generated dummy service record for vehicle");
         return record;
     }
 }

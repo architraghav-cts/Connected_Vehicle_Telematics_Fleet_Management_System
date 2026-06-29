@@ -7,6 +7,8 @@ import com.example.telematics_fleet_management.utils.DummyServiceRecordGenerator
 import com.example.telematics_fleet_management.utils.DummyTelemetryGenerator;
 import com.example.telematics_fleet_management.utils.DummyTripGenerator;
 import com.example.telematics_fleet_management.utils.DummyFuelLogGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -56,6 +58,8 @@ public class TelemetrySimulationService {
         this.serviceGenerator = serviceGenerator;
     }
 
+    private static final Logger logger = LoggerFactory.getLogger(TelemetrySimulationService.class);
+
     @Scheduled(fixedRate = 5000)
     public void generateData() {
 
@@ -101,6 +105,7 @@ public class TelemetrySimulationService {
                 );
             }
         }
-        System.out.println("Dummy fleet data generated.");
+
+        logger.info("Telemetry data generated for all vehicles.");
     }
 }
