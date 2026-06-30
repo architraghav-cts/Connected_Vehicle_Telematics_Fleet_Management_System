@@ -1,7 +1,7 @@
 package com.example.telematics_fleet_management.config;
 
-import com.example.fleet_management_system.entity.User;
-import com.example.fleet_management_system.repository.UserRepository;
+import com.example.telematics_fleet_management.model.User;
+import com.example.telematics_fleet_management.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
