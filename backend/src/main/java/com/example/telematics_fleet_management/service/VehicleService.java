@@ -8,6 +8,8 @@ import com.example.telematics_fleet_management.model.enums.VehicleStatus;
 import com.example.telematics_fleet_management.repository.TelemetryRepository;
 import com.example.telematics_fleet_management.repository.UserRepository;
 import com.example.telematics_fleet_management.repository.VehicleRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -19,6 +21,7 @@ public class VehicleService {
     private final VehicleRepository vehicleRepository;
     private final TelemetryRepository telemetryRepository;
     private final UserRepository userRepository;
+    private static final Logger logger = LoggerFactory.getLogger(VehicleService.class);
 
     public VehicleService(
             VehicleRepository vehicleRepository,
@@ -72,7 +75,7 @@ public class VehicleService {
         telemetry.setFuelLevel(100.0);
         telemetry.setRecordedAt(LocalDateTime.now());
         telemetryRepository.save(telemetry);
-
+        logger.info("Registered new vehicle with VIN");
         return savedVehicle;
     }
 }
