@@ -2,6 +2,7 @@ package com.example.telematics_fleet_management.controller;
 
 
 import com.example.telematics_fleet_management.model.User;
+import com.example.telematics_fleet_management.service.AdminService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,7 @@ public class AdminController {
 
         return response;
     }
+
     @GetMapping("/users")
     public List<User> getAllUsers() {
         return adminService.getAllUsers();
