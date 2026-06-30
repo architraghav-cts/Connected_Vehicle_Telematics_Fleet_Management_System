@@ -1,5 +1,6 @@
 package com.example.telematics_fleet_management.service;
 
+import com.example.telematics_fleet_management.model.DriverScore;
 import com.example.telematics_fleet_management.model.User;
 import com.example.telematics_fleet_management.model.Vehicle;
 import com.example.telematics_fleet_management.repository.*;
@@ -98,10 +99,14 @@ public class TelemetrySimulationService {
             }
 
             if (Math.random() < 0.15 && driver != null) {
+                DriverScore previousScore =
+                        driverScoreRepository.findTopByDriverOrderByScoreIdDesc(driver);
+
                 driverScoreRepository.save(
                         driverScoreGenerator.generate(
                                 driver,
-                                vehicle
+                                vehicle,
+                                previousScore
                         )
                 );
             }
