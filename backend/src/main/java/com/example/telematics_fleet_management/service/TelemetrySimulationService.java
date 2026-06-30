@@ -7,6 +7,7 @@ import com.example.telematics_fleet_management.utils.DummyServiceRecordGenerator
 import com.example.telematics_fleet_management.utils.DummyTelemetryGenerator;
 import com.example.telematics_fleet_management.utils.DummyTripGenerator;
 import com.example.telematics_fleet_management.utils.DummyFuelLogGenerator;
+import com.example.telematics_fleet_management.utils.DummyDriverScoreGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
