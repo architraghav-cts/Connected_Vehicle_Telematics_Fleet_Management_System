@@ -12,6 +12,7 @@ import java.util.List;
 @Component
 public class DummyVehicleGenerator {
     private static final Logger logger = LoggerFactory.getLogger(DummyVehicleGenerator.class);
+
     public List<Vehicle> generateVehicles() {
         List<Vehicle> vehicles = new ArrayList<>();
 
@@ -26,3 +27,4 @@ public class DummyVehicleGenerator {
         logger.info("Generated dummy vehicles");
         return vehicles;
     }
+}
